@@ -1,7 +1,6 @@
 .all-weeks {
     display: flex;
     flex-direction: column;
-    
 }
 
 .week-1 {
@@ -36,10 +35,22 @@
     height: auto;
 }
 
+.heading {
+    text-align: center;
+}
 h1 {
-    text-align:  center;
+    display: inline-block;
     border: solid;
     margin: 12.5px 25px;
     margin-top: 50px;
     padding: 50px;
+    color: black;
+    font-size: xx-large;
+}
+
+body {
+    background-image: url("Photos/Miscellaneous/bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
