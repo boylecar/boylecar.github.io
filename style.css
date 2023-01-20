@@ -15,7 +15,7 @@
     padding: 30px;
     margin: 25px;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.45);
 }
 
 .WEEK1 {
@@ -69,7 +69,7 @@ img {
 
 .description-heading {
     flex: 0 1 0;
-    border: solid;
+    /*border: solid;*/
     padding: 0px;
     display: flex;
     flex-direction: column;
@@ -85,14 +85,34 @@ img {
 
 .description-body-summary {
     flex: 1 1 0;
-    border: solid;
+    /*border: solid;*/
 }
 
 .description-body-skills {
     flex: 1 1 0;
-    border: solid;
+    /*border: solid;*/
 }
 
 h2 {
     margin: 0px;
+}
+
+h3 {
+    /*margin: 0px;*/
+    font-size: 20px;
+}
+p {
+    text-align: left;
+    text-indent: 30px;
+    font-size: 18px;
+}
+
+ul {
+    text-align: left;
+    text-indent: 30px;
+    font-size: 18px;
+}
+
+a {
+    color: black;
 }
