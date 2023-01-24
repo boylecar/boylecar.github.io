@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url("../../Photos/Miscellaneous/bg.jpg");
+    background-image: url("../../pictures/Miscellaneous/bg.jpg");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
