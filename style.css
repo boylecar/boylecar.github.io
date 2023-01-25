@@ -14,7 +14,7 @@
     border-width: 5px;
     padding: 30px;
     margin: 25px 100px;
-    justify-content: space-between;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.45);
 }
 
@@ -59,6 +59,7 @@ body {
 
 img {
     border-radius: 10px;
+    
 }
 
 .description {
@@ -149,3 +150,6 @@ h4 {
     flex: 1 1 1;
 }
 
+.picture {
+    align-items: center;
+}
