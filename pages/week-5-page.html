@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 5 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-5-page.html">
+                    <h1>Week 5 - Automatic Watch Winder pt. 2</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-5-photos/4.png" alt="Automatic Watch Winder completed front"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        For the same reasons I mentioned in my project for last week, I wanted to continue building an automatic
+                         watch winder. Since I was young I have been fascinated by every aspect of watches. I collect many 
+                        watches and I am always interested to learn more about their mechanisms or watch history and design. 
+                        Automatic watches are widely regarded as the most practical, since wearing it every day means the watch 
+                        will never lose power. However, if you don't wear them every day the power drains quickly after one or multiple 
+                        days. To solve this, I wanted to create a mechanism that would wind my automatic watches for me on the days 
+                        when I don't wear them. Because I have already begun this project,
+                        I will keep the same overall goal:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Create a functioning base to test battery cell connections with different parameters.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        To achieve my goal this week, the first thing in my plan is to create a more precise watch holder model for 3D printing.
+                        To do this I will purchase a set of calipers that are acurrate enough to create a better piece. Next I 
+                        will need to build the box that will actually hold the motor and winder, ensuring that it's stable enough 
+                        and heavy enough so that the motor's torque won't unintentionally move the box itself. Once I have constructed 
+                        all the individual pieces, I need to re-write the Arduino code that tells the controller when to turn the motor. 
+                        I want to be able to easily set the amount of times the watch will turn each day so I don't have to unplug it 
+                        or worry about the watch being overwound and potentially damaged. Finally, I will assemble all the pieces and make 
+                        any changes if necessary.
+                    </p>
+                </div>
+                <img src="../pictures/week-5-photos/3.png" alt="Back of Watch Winder Housing"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-5-photos/2.png" alt="Watch Winder with motor and Arduino"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        Building off what I already created last week, my first task this week was to create a more precise 
+                        watch holder that creates a tight fit with the watch pillow that will sit inside it. Previously I had 
+                        used a ruler that I thought would be accurate enough, although it turns out that it wasn't. I purchased 
+                        a set of calipers accurate to .001 inches and used it to measure the size of the watch pillow. In my new 
+                        CAD model of the watch holder piece, I changed the dimensions to just .005in. above the actual dimensions
+                        on each side to account for slight imperfections with the 3D printer. I then did the same with the stepper 
+                        motor, modeling the watch holder so it will fit perfectly. After waiting for the print to finish and ensuring
+                        that it did in fact fit, I then went to create the physical box to house the motor and watch holder. I used 
+                        left-over wood from my week 1 project that I first cut to the right dimensions to fit the watch holder with 
+                        a small amount of space, then used a drill press and jigsaw to cut out the right sized hold for the motor to 
+                        fit in the back of. I used screws to secure a connection between the 5 pieces of wood. After plugging the motor 
+                        into the controller and Arduino, and placing the watch in its holder, I got to see that my project worked exactly 
+                        how I had designed it after all.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                Overall this has been the most rewarding experience so far. Although it took longer than I initially planned, I am beyond 
+                glad that I took my time to finish the project thoroughly. I created a product that is has a genuine purpose and adds value 
+                to my own life. It was also very exciting to learn more about the Arduino on a deeper level and create a project of my own 
+                without having to follow a guide. This project has made me even more excited to become an electrical engineer where 
+                I will be able to use my knowledge of electronics and programming to create products that are exponentially more 
+                valuable. I would like to do more with this project in the future, where I think my next steps would be to learn 
+                how to program my own microcontroller in order to fit everything on one breadboard. After that, I would be interested
+                in learning PCB design and production to create a single PCB that would control my motor for a much lower cost and more 
+                efficient system.
+            </p>
+        </div>
+    </body>
+</html>
