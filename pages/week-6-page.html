@@ -12,7 +12,7 @@
             </div>
             <div class="headingM">
                 <a href="week-6-page.html">
-                    <h1>Week 6 - Automatic Watch Winder Pt. 3</h1>
+                    <h1>Week 6 - Watch Mechanism Kit</h1>
                 </a>
             </div>
             <div class="headingR">
@@ -20,20 +20,21 @@
         </div>
         <div class="page-body">
             <div class="top">
-                <img src="../pictures/week-6-photos/1.jpeg" alt="XXX"></img>
+                <img src="../pictures/week-6-photos/4.png" alt="Watch assembly tools"></img>
                 <div class="text">
                     <h4>WHY?</h4>
                     <p>
-                        For the same reason as my first two weeks working on this project, I wanted to create and optimize an 
-                        automatic watch winder that I can use in my everyday life to charge an automatic watch if it loses power.
-                        I have had a passion for watches ever since I was a young kid, and as my collection has grown over time I have 
-                        began to face the problem of keeping them all running. This provided the opportunity for me to create a 
-                        mechanism that would wind the watches with the force of gravity by rotating the watch and gradually 
-                        winding the mainspring. Building off last week's design, my big-picture goal this week is to:
+                        For the same reason as my last two projects, I chose this project because of my fascination with watches.
+                        Over my last break from school I had purchased a kit that instructs you on how to disassemble and 
+                        reassemble a mechanical watch movement. My purpose with this project was to gain understanding about 
+                        watch mechanisms on a more fundamental level, understanding the different components that work together 
+                        to create a functioning movement. Since I finally had an opportunity to build the watch movement, 
+                        my goal for this week's project was:
+
                     </p>
                     <h5>
                         <strong><em>
-                            Optimize an automatic watch winder
+                            Disassemble and reassemble an automatic watch movement to understand its components and their relationship.
                         </em></strong>
                     </h5>
                 </div>
@@ -42,39 +43,36 @@
                 <div class="text">
                     <h4>HOW?</h4>
                     <p>
-                        To add onto last week's iteration of my project, it is clear that the biggest improvement that should 
-                        be made is in terms of the design's simplicity. Using an Arduino to control the motor was the only 
-                        feasible solution I had access to in previous weeks, however it is not optimized for my project because 
-                        the amount of unused components that make up the Arduino. Essentiallly the only components of the Arduino 
-                        that I'm actually using is the microcontroller and the GPIO pins. The next logical improvement then is 
-                        to design a system using only a microcontroller that replaces the Arduino. For this I would need to purchase 
-                        a microcontroller which are very cheap, and a device to program it with. After researching I decided 
-                        that a PIC microcontroller would be the best option for my project. I would need to learn some basic 
-                        Assembly Language to create a program for the micrcontroller and use a compiler to actually tell the 
-                        microcontroller what to do. I will simply attach the microcontroller to a breadboard and then to the 
-                        pins for the motor to activate it.
+                        Because the instructions for building the watch movement were included in the kit, my planning for this 
+                        week's project was very straightforward, requiring little extra planning besides just following the directions
+                        given to me by the instruction guide. Before actually beginning the process of building the movement, I 
+                        only needed to find a large empty table and set up an overhead light. I also had to wear gloves in order 
+                        to ensure that I didn't get dust on the watch movements. Becaue they are so small and precise, even dust can 
+                        negatively affect the accuracy of a movement.
                     </p>
                 </div>
-                <img src="../pictures/week-6-photos/2.jpeg" alt="XXX"></img>
+                <img src="../pictures/week-6-photos/3.png" alt="Disassembly in progress"></img>
             </div>
             <div class="bottom">
-                <img src="../pictures/week-6-photos/3.jpeg" alt="XXX"></img>
+                <img src="../pictures/week-6-photos/2.png" alt="Completed Watch Movement in Case"></img>
                 <div class="text">
                     <h4>WHAT?</h4>
                     <p>
-                        The process of creating the 3D model of the part was simple and only took a few hours after I was given 
-                        the dimensions that would accomodate the battery cells. I also modeled the metal plate that would secure the 
-                        battery cells but have to wait for the materials to create it with. When I had the opportunity to learn 
-                        how to use the milling machine, I spent several hours learning the fundamentals and practiced drilling 
-                        holes and fitting each sides to the correct dimensions. The product of my tutorial is the aluminum block 
-                        in the pictures to the left and above. After I understood how to use the machine, it was relatively quick 
-                        to cut the plastic with a band saw, square and flatten the base with the milling machine, then make cuts 
-                        to set the 
-                        block to be the correct dimensions. Finally, I drilled the holes in the correct locations and at the right 
-                        depth, so that I could attach the plates with screws later. The final step after drilling the holes was 
-                        to tap them to the right size to create the threading for the screws. The most difficult parts of 
-                        the entire process were learning how to use the machine and accomodating the tediousness of the tiny 
-                        tolerances.
+                        Following the instruction manually carefully, I began by de-energizing the mainspring, removing the 
+                        stored potential energy by removing the tension from the mainspring. Next I began removing the components 
+                        in the order I was instructed to, beginning with the minute and hour hands, then the driver canon pinion 
+                        which attaches to the hour hand. After that I removed the balance wheel, the part you can see oscillating back 
+                        and forth because of the palette fork and the escape wheel. I also removed the center wheel, which powers the minute hand with 
+                        the mainspring stored in the barrel. Additionally I had to remove various gears throughout the process 
+                        that transfer energy to different parts of the movement. The final steps were to remove the stem, the part 
+                        of the watch you rotate to wind it and set the time, and the winding and sliding pinion with interlock with 
+                        each other to allow you to engage and disengage the stem from the mainspring. The most important systems 
+                        that encompass what is needed to build a watch are the escapement, keyless works, and gear train. The 
+                        escapement mechanism is what delivers power to the gears at a consistent rate, preventing the mainspring 
+                        from dissipating power too slow or fast. The keyless works system includes all the components that allow to engage 
+                        and disengage the stem from the mainspring. Finally, the gear train simply refers to all of the gears that 
+                        work to deliver energy to the pinions and hands, ensuring that the minute hand rotates 12 times per every 
+                        rotation of the hour hand.
                     </p>
                 </div>
             </div>
@@ -82,17 +80,17 @@
         <div class="reflection">
             <h4>REFLECTION</h4>
             <p> 
-                My second project of this year, although much more simple than the first, was just as valuable in terms of how 
-                much I was able to take away about what it's like to be an engineer. I did a much better job with this project 
-                on planning and thinking through potential future problems before I actually began creating the physical model. 
-                While the planning process isn't quite as exciting, I continue to learn to appreciate this part of the process as 
-                necessary for producing a high-quality outcome. I also find significant enjoyment in the process of learning 
-                new skills, like 3D modeling with NX for this project and even more so the milling machine. This project made me 
-                realize that I enjoy the process of building/assembling the product and working with physical parts 
-                more than anything. This experience also helped grow my patience and attention to detail by requiring me to 
-                go very slow and be precise when making measurements that need to be accurate to within .0005 inches. Although 
-                this project was more skill-focused than it was outcome-focused, I am beyond satisfied with the lessons I 
-                learned and the outcome produced.
+                Initially, my plan for this week's project was to continue my project from the last two weeks, my automatic watch 
+                winder. This week I purchased a microcontroller and a programmer for it so I could program it to perform the simple 
+                tasks I needed without all the unnecessary components that an Arduino uses. After spending close to 20 hours 
+                learning about microcontrollers and how they work, and trying to program my own, I was still no closer to solving the 
+                errors I kept getting. Because I wanted to keep on track for completing one project every week, I knew I would 
+                have to cut this project off early and work on something I knew I could complete. I wish I was able to finish my 
+                original plan, but I also learned a valuable lesson that while learning a completely new skill, I can't spend forever
+                on a project without getting anywhere. I think it's important to struggle and not give up too soon, but at a 
+                certain point you begin to waste your time. Because of this, I switched to a different project where I genuinely
+                learned a lot about a different subject I was interested in. Eventually when I have a better understanding of 
+                microcontrollers, I'm confident I will be able to come back to this project and find a solution.
             </p>
         </div>
     </body>
