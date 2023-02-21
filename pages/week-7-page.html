@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 7 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-7-page.html">
+                    <h1>Week 7 - Automatic Watch Winder pt. 3</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-7-photos/4.png" alt="Programming the Microcontroller"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        While I had already created an effective automatic watch winder, there was still much to be desired 
+                        in terms of the appearance and functionality of my design. Mainly, the Arduino I used to control the 
+                        motor was unnecessarily large and included many unused components. My goal is always to do the best 
+                        work I can, and it was clear that the way for me to most substantially improve my design was to simplify 
+                        the microcontroller process. Building on my previous design, this week's goal was to:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Simplify the microcontroller process of my watch winder.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        Initially, I performed some basic background research on how a microcontroller actually works and the different 
+                        kinds of microcontrollers to get an idea of what this week's project would require. I decided to purchase a 
+                        PIC microcontroller, mainly because of its programming abilities and the wide variety of support with them 
+                        because of their popularity. I also purchased a PicKit4, the debugger that I would use to program the 
+                        microcontroller, and a small breadboard to create the circuit on. The only step then would be to  
+                        create a program that would be uploaded to the microcontroller.
+                    </p>
+                </div>
+                <img src="../pictures/week-7-photos/3.png" alt="Microcontroller connected to Stepper Motor"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-7-photos/2.png" alt="Microcontroller Breadboard Setup"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        My first and most simple step was to create the circuit on the breadboard where I would attach my microcontroller. 
+                        The next task was to learn to program the microcontroller with MPLABX, the software created by the manufacturer of 
+                        the microcontroller, Microchip. After spending many hours watching tutorials about programming PIC microcontrollers, reading the Datasheet and 
+                        every troubleshooting resource I could, and talking to several peers about their own microcontroller experience, 
+                        I was still struggling to effectively upload my program and use my microcontroller. By starting from the top down, 
+                        I deduced that my error must have been made in the program itself. After going through nearly every line of code 
+                        in the program, many of which were inserted automatically by the software, I identified the one that was causing an 
+                        error and removed it. Suddenly, my program worked exactly as I had intended. Initially, the output was only to turn on 
+                        an LED, then to make it blink. After several iterations of my code and uploading it to test on my watch winder, I 
+                        eventually created one that works exactly how I want.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                This week's project has been the most frustrating by far. I had previous experience programming an Arduino, 
+                but programming a microcontroller with assembly language proved to be much more challenging than I could've 
+                imagined. Some of the difficulty was simply due to tedious tasks and simple mistakes, but most of it was due 
+                my sheer lack of experience with assembly language. I have never encountered any problem that works in any way 
+                that is analogous to the way the registers in a microcontroller operate and execute actions. I'm glad that I 
+                persisted and eventually reached the outcome I desired, but even more so that I was able to gain experience  
+                programming microcontrollers so that I may use it for future projects. Causing an LED to blink with a 
+                microcontroller is often referred to as the "Hello World" of microcontrollers, or basically the first notable 
+                achievement in the long process of learning about a specific language or topic in programming/engineering. Once 
+                I achieved this benchmark and passed the very frustrating initial threshold, I thoroughly enjoyed the process 
+                of programming a microcontroller and seeing its actions begin to approach my intended design. This was by far the 
+                most difficult project I've faced so far, but definitely the most rewarding.
+            </p>
+        </div>
+    </body>
+</html>
