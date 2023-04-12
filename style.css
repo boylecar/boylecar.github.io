@@ -153,3 +153,15 @@ h4 {
 .picture {
     align-items: center;
 }
+
+h4, .divider, .divider1 {
+    font-size: 25px;
+}
+
+.divider {
+    margin: 150px 500px 25px 500px;
+}
+
+.divider1 {
+    margin: 25px 500px 25px 500px;
+}
