@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 4 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-4.2-page.html">
+                    <h1>Week 4 - FPGA Clock Module</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-4-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        This week's project was unique in the way that the opportunity came about. I am currently taking 
+                        ECE 271, Digital Logic & Design, where we learn about the fundamentals of circuit design and using 
+                        logic gates. On Wednesday night, my professor sent an email stating that the first 3 students to 
+                        build a functioning timer on their FPGA using SystemVerilog would be gifted a Terasic De1-SoC FPGA 
+                        board for free. Within 5 minutes I signed up for his earliest office hours on Friday morning where I would be able to show 
+                        him my project. I immediately got started on my goal:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Create a clock module using SystemVerilog and program it onto my FPGA.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        The first thing I did to get started on this project was to carefully read the instructions about what 
+                        specifically we were supposed to create. The program that we were to desing would have 2 inputs, an enable 
+                        pin that allows you to pause the timer, and a reset pin to set the clock back to zero. The timer would 
+                        use the 2 right-most hex displays of the FPGA to count seconds up to 60, then rollover into the minutes.
+                        This would repeat for the hours as well. I then created a high-level diagram of the entire system, beginning 
+                        with the internal oscillator, and using different modules to create the desired outcome.
+                    </p>
+                </div>
+                <img src="../pictures/week-999-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-999-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        Firstly, I needed to design a counter that would count the rising edges of the internal oscillator. The output 
+                        of this was fed into a comparator that compared the count to a value that is equal to the frequency. The output 
+                        of this comparator was fed back into the reset pin of the counter, and also into the clock signal of a 
+                        counter for the seconds. This had the effect of resetting the initial counter at exact 1 second, and incrementing 
+                        the next counter by 1 exactly once per second. The output of the seconds counter was driven through a parser and 
+                        then two decoders that displayed the ones and tens place of the seconds on two hex displays. The output of the seconds 
+                        counter also went into a comparator that checked if the value of seconds was less than 60. If it was not, the output 
+                        went through a synchronizer and was put into the reset pin of the seconds counter to reset the count to zero. Also,
+                        this same wire was connected to the clock module of the a minutes module that has the same exact structure as the 
+                        seconds module as just described. Once every 60 seconds, the minutes counter would increment by 1. The reset pin was 
+                        put into a NAND gate with each of the rollover wires, allowing you to reset the displays at any time, and the enable 
+                        pin was put into a NAND gate with the internal oscillator counter, to effectively keep the counter at 0 indefinitely, 
+                        never allowing the seconds counter to increment.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                When I first got the email about the opportunity for this competition, I was very excited to experience the first 
+                real challenge I've experienced in my career as an electrical engineer. It was intimidating to have 
+                no idea how I was going to finish the project in just two nights, but at the same time thrilling to go through 
+                the problem-solving process of creating something with a time-limit. I stayed up unti 3:30am on Thursday night, 
+                and was the first person to pick up my FPGA board on Friday morning. The more I push myself in new ways when I'm 
+                not sure how I'm going to succeed, I realize that I improve as a person and an engineer. As I look forward, I 
+                am excited to think about all the new opportunities that I have with the new FPGA board, especially the possibility 
+                of using it to host this very website or for some aerospace application that may be applicable in my future career.
+            </p>
+        </div>
+    </body>
+</html>
