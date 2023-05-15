@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 5 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-5.2-page.html">
+                    <h1>Week 5 - 8-bit Registers</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-5.2-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Continue building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        In order to continue with this project by building the 8-bit registers, I needed only to follow the instructions
+                        provided and follow along with the instructional videos for this project by Ben Eater, an electrical engineering 
+                        educator online. My process would be to first watch the videos to get a broad overview of the building process and 
+                        learn about how the different components work together, then assemble the project on my own using the high level 
+                        circuit diagram for the registers and looking at the datasheets for the individual chips. Finally, once I have 
+                        built the module and made sure that it works, I will rewatch the instructional videos to solidify my understanding 
+                        of how the register functions at a fundamental level.
+                    </p>
+                </div>
+                <img src="../pictures/week-5.2-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-5.3-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        At a fundamental level, an 8-bit register is made from 8 D-flip-flops. On the rising edge of each clock signal, a 
+                        D-flip-flop will update its output based on its input and store that value in "memory." By wiring 8 of these 
+                        flip flops in parallel, you create a register. With a control pin, you can select whether the flip-flop will read 
+                        the input and push it to its outputs or if it will keep its previous state. By connecting the output of these 
+                        registers through LED's, it's easy to see visually the data stored in the register. Additionally, the output of the 
+                        register is put through a tristate buffer, which allows data to flow only when its enable pin is HIGH. From there, the 
+                        data is output onto the common bus whenever the enable pin is HIGH. With the CLK, Read, and Enable pins, you have 
+                        control over the register and it can be effectively implemented with the rest of the computer. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                Being very similar to my first week working on this project, it was very exciting to be working with electronics 
+                in a meaningful way and seeing a functioning computer come together. It's so interesting to me to see how all of 
+                the components work together at a fundamental level to create something meaningful. Working on a project like this 
+                also makes me really appreciate the ingenuity of the electrical engineers who first used electronics to build 
+                computers in a much more sophisticated way than I am even still. This project has also given me even further 
+                reassurance that a career in electrical engineering is what I want, because of how much I enjoy the entire 
+                process from start to finish of building a project like this. Even after a long week of many hours of classes,
+                homework, and tests, it was still exciting to be doing real work on a project like this.
+            </p>
+        </div>
+    </body>
+</html>
