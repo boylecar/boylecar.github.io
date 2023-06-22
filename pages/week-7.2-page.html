@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 7 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-7.2-page.html">
+                    <h1>Week 7 - Memory (SRAM)</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-7.2-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Continue building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        In order to continue with this project by building the SRAM Memory, I needed only to follow the instructions
+                        provided and follow along with the instructional videos for this project by Ben Eater, an electrical engineering 
+                        educator online. My process would be to first watch the videos to get a broad overview of the building process and 
+                        learn about how the different components work together, then assemble the project on my own using the high level 
+                        circuit diagram for the SRAM Memory and looking at the datasheets for the individual chips. Finally, once I have 
+                        built the module and made sure that it works, I will rewatch the instructional videos to solidify my understanding 
+                        of how the SRAM Memory functions at a fundamental level.
+                    </p>
+                </div>
+                <img src="../pictures/week-7.2-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-7.3-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        At its core, the SRAM memory unit is built on two of the same chip, the TI 74F189. This chip is a 64-bit memory 
+                        unit which has 16 possible addresses where you can store 4 bits of information each. Using two of these chips in 
+                        parallel, I can store a total of 128 bit of data, or 16 "words" of 8 bits each. Using a multiplexer as the input 
+                        for the addresses of each of these chips, you can choose between 'programming' and 'run' mode, where the data that 
+                        you write to the memory will depend on which source you want to write from. Using the dip switches included on the computer, you 
+                        can set a word of memory to a specific address manually. A tristate buffer is also used to allow 
+                        you to enable and disable your writing to the common bus. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                Building the SRAM memory was more complex than any of the other pieces before, but for the same reason it was 
+                        even more exciting to build. Before I began studying electrical engineering, I had a very limited understanding 
+                        of how things like memory in a computer worked at a fundamental level. After building my own registers and 
+                        physically connecting the wires on a breadboard, it is very exciting to begin to understand the fundamentals of the tools that we 
+                        use every day such as cell phones and laptops. With the increase in complexity of this project, I realize how 
+                        much easier it is to make a mistake, and similarly how much more difficult it is to correct one. It takes patience, 
+                        persistence, and critical thinking from first principles, but eventually it's possible to debug the project and 
+                        fix its errors.
+            </p>
+        </div>
+    </body>
+</html>
