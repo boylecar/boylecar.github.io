@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 1 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-1.3-page.html">
+                    <h1>Week 1 - Arduino EEPROM Programmer</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-1.3-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Continue building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        Now that my computer is starting to come together, the next piece that would be important is to make it possible 
+                        to output user-friendly information so that it doesn't require specialized knowledge of each peace to understand. To do this,
+                        I will use four 7-segment decimal displays. Three of them will be used to represent a value up to 255, and the fourth will 
+                        represent a positive or negative sign value. In order to do build the logic needed to control the values for 
+                        each of the segments of the display for each value, I will use a ROM chip to replace combinational logic. This week, I will 
+                        build a robust EEPROM programmer using an Arduino Nano, so that I can simply upload a program to the Arduino that will 
+                        change the information stored in the EEPROM.
+                    </p>
+                </div>
+                <img src="../pictures/week-1.3-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-1.3-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        In order to achieve the effect that I want where some 8-bit input will be interpreted by the EEPROM to output the 
+                        decoded values for the individual segments of the 4 displays, I will essentially be programming the output values 
+                        into the memory of the EEPROM, stored at the address that is specified by the inputs. For example, if 142 should be 
+                        interpreted by the EEPROM and output a binary value of 11000101, then I will program the EEPROM to have the value 
+                        11000101 at the address 142. Because the Arduino doesn't have enough pins for all 11 inputs and 8 outputs, however, 
+                        I will build an 8-bit shift register with two IC chips that will be used to set the value at the register specified by the Arduino.
+                        In practice, the Arduino will shift out 8 bits of information, set the 11 address pins to the correct value, and enable 
+                        the EEPROM to reprogram. Next week, I can use this EEPROM to replace the combinational logic needed in the output register 
+                        of my computer.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                Working on building a way to program the EEPROM this week has been one of the most exciting projects yet for the simple fact 
+                that I was able to implement a few different skills that I currently have in addition to new knowledge to build something useful.
+                Programming an Arduino was one of the first things that I learned how to do as an Electrical Engineer, so it is very rewarding to 
+                reflect on how far I have come and how much knowledge I am able to apply to a new challenge that only 6 months ago I would've had 
+                no idea how to approach. As I continue to gain more skills moving forward, I'm very excited to see how I can use my current knowledge as a tool 
+                to solve new and different challenges.
+            </p>
+        </div>
+    </body>
+</html>

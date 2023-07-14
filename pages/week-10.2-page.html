@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 10 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-10.2-page.html">
+                    <h1>Week 10 - Embedded System: 24-Hour Temperature</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-10.2-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        Usually I only reflect on the personal projects that I complete, but for this week I wanted to analyze a 
+                        project that I have completed for my ENGR 103 class using Embedded Systems, microcontrollers, and C programming. As 
+                        this is the first significant project that I have done that is related to my future career plans, I thought that it 
+                        was important to document and record my progress for looking back on at a later date. The goal for this project assigned 
+                        by my professor was:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Use an embedded system to record, analyze, and summarize data over a 24-hour period.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        Out of the choices that we had for parameters to measure, I chose to look at temperature over a 24-hour period in 
+                        my apartment. To make this possible I used a thermistor which is just a variable resistor that changes with temperature. 
+                        By measuring the resistance of the thermistor with a microcontroller, I could determine the temperature as specified by 
+                        the datasheet for the thermistor. I could then record this temperature by printing it to the serial monitor where I 
+                        could have a Python script read from and record the data into a .csv file, and create a graph of the temperature over 
+                        time. Another requirement of this assignment was to have a 10-minute rolling average, which is the value that I would graph 
+                        for a specific time. After 24 hours, I would have a graph that I could use to analyze MAX, MIN, and AVG temperatures.
+                    </p>
+                </div>
+                <img src="../pictures/week-10.2-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-10.2-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        To construct the hardware needed for this project, I needed only to create a voltage divider with a known voltage source 
+                        and resistor. By measuring the difference between GND and the voltage across the thermistor, I could calculate its resistance. 
+                        Based on the bands given by the datasheet for temperature and the correlated resistance, I wrote a function that returned the 
+                        temperature in degrees based on which region the resistance falls into. Every second, the program will measure the voltage, calculate 
+                        resistance, convert to temperature, and print that temperature. It will also update an array of size 600 (600 seconds in 10 minutes) with 
+                        the current temperature and calculate the average temperature of the last 10 minutes. Finally, it will calculate the new rolling 
+                        average from the current average, the current temperature, and the total amount of data points used to calculate the current average. All 
+                        of this is printed and read by a Python script that records the data and returns a graph of the data over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                The most interesting part about this project and the class for me was learning about how much potential there is for computers.
+                I had always had the impression that computers were "limited" to personal use for school, work or similar. But being able 
+                to program my own embedded system that functions without any user input and returns valuable information collected exclusively 
+                from sensors is something very useful that I would like to do more with in the future. For example, systems like this that take 
+                no user input and run completely based on sensors can be used automate important things like electric cars. As this is an area that 
+                is of high interest for me in my career, getting even just a small glimpse into the kind of work that I could be doing was very 
+                exciting.
+            </p>
+        </div>
+    </body>
+</html>

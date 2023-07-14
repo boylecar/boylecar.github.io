@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 4 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-4.3-page.html">
+                    <h1>Week 4 - Flags Register</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-4.3-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Continue building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        This week I will install the final hardware to complete my computer. This week I learned about what it means for a 
+                        computer to be "computationally complete." Formally, this means that the computer can compute anything that a 
+                        Turing Machine can compute. This is an entirely too large of a topic to describe fully, but it is important to know 
+                        that the only thing missing for my computer to be Turing complete is the ability to perform if, then operations. To do 
+                        this, I build a Flags Register that will store data when a specific signal goes HIGH. The signals I will use are both 
+                        derived from the ALU. The first flag is the Zero Flag which is raised when the value in the ALU is zero. The second flag is 
+                        the Carry Flag, which goes HIGH when the ALU has a carry-out bit. Both of these will be driven as inputs to the EEPROM, and 
+                        used in if, then statements. For example, I could perform subtraction between the A and B register. If A and B are equal, the 
+                        value stored in the ALU is zero and the Zero Flag is raised. I can use this to represent the expression: "if A == 5:  "
+                    </p>
+                </div>
+                <img src="../pictures/week-4.3-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-4.3-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        To implement the Flags Register, I use the same flip-flop chip that I have used for previous modules to store the values of 
+                        the Carry and Zero Flags into the Flags register. The enable signal which updates the values stored in this register is 
+                        also implemented into the CPU, so that during a program it can store the state of the Flags into the Flags Register. On 
+                        the next step of the program, it could use these values and do something different depending on the different states of the Flags.
+                        This essentially creates a feedback loop, where the output of a program is fed back into the input of the CPU which executes 
+                        the program itself. Finally, I will reprogram the EEPROM's to account for these inputs.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                This week I learned a significant amount about the Flags register and how that can be used to write conditional expressions,
+                but what I enjoyed learning most was about the philosophical idea of "computational completeness" and what a Turing 
+                Machine is. It's very interesting to me to learn about the history of electronics, computers, math, and other similar topics,
+                and seeing how these high-level concepts apply to the physical things that I'm building. Now that I have installed all the 
+                hardware for this computer, I'm very excited to be able to learn more about Assembly Language and microcode when learning to 
+                make more advanced programs next week.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 11 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-11.2-page.html">
+                    <h1>Week 11 - IR Remote-Controlled Display</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-11.2-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        For the same reason as last week's project, this project felt like a critical point in my growth as an engineer and 
+                        for this reason I decided to document it here. In my Digital Logic and Design class, ECE 271, we have done several 
+                        projects that have allowed me to practice designing digital logic circuits. I have really enjoyed this process, and 
+                        because of the difficulty of this project, I think it is important to recognize how much I have learned and how much 
+                        room I still have to grow. The task assigned by my professor was:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Build a system using digital logic that performs some function based on user input.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        There were a few options that we could select for inputs and outputs for this project, and I chose to take on the 
+                        most difficult of these. The most difficult input to look at was an Infrared (IR) signal from a TV remote or similar. 
+                        The output I chose to use was moving a sprite on a VGA display. Building the IR decoder was difficult as the timing 
+                        had to be very precise, as well as the fact that the message received needed to be verified before causing a change 
+                        in the output, otherwise IR noise from sources other than the remote could cause a change in the output. The system that 
+                        I wanted to simulate with this project was the function of changing the volume up or down on a TV. At a high level, this 
+                        required an IR decoder module, a state machine to interpret the IR signal and set the volume level, and output logic 
+                        that would output the current volume level onto the VGA display.
+                    </p>
+                </div>
+                <img src="../pictures/week-11.2-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-11.2-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        Since IR data from a remote is encoded in binary, he IR decoder functions primarily with a counter that will count the 
+                        amount of time since the last rising edge of the Data signal. Using a series of comparators, you can determine if the value was a 
+                        logic 1 or 0 based on how long the pulse was. After the initiation sequence is detected, a shift register will push the values interpreted 
+                        by the IR sensor into an internal shift register. Once the closing sequence is detected, verification is performed on this sequence to 
+                        make sure that it is a proper sequence and not one that was misread. If it is a good input, it is decoded based on which input was 
+                        pushed. For example, if the UP button was pushed on the remote, the IR decoder will perform all the steps described and tell the 
+                        state machine to increment the current state by 1. The VGA display works by choosing to display the background color or the color of an 
+                        image file stored in memory as it sweeps through columns and rows to display an image.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                This project is the most technically-involved one that I have completed so far and although there are many imperfections and 
+                inefficiencies in my design, I'm very happy with how it turned out overall and I'm excited to see what I can do with an IR 
+                decoder in future projects. As I do more engineering projects, gain more skills and therefore more confidence in my ability 
+                to solve problems, I learn to appreciate the process of problem-solving more and more. It used to be very uncomfortable to 
+                start a project and have no idea how I was going to come to a solution. Although today it still uncomfortable, I have become 
+                more familiar with that uncomfortability. Because I have the confidence in myself to know that I can finish the project at 
+                hand, I have learned to love the process of problem-solving and using the tools I have to approach a solution. I cannot overstate 
+                how much this project and class has solidified my desire to pursue a career as an electrical engineer.
+            </p>
+        </div>
+    </body>
+</html>

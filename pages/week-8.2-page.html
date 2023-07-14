@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 8 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-8.2-page.html">
+                    <h1>Week 8 - Memory (SRAM) pt. 2</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-8.2-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Continue building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        In order to continue with this project by building the SRAM Memory, I continued to follow along with the instructions
+                        and schematics provided by Ben Eater, an electronics educator. At a high level, the purpose of the SRAM module is 
+                        to store information that can be used for different purposes in the computer. There will be two "modes" for programming 
+                        the SRAM: manual and run. After the program is complete, I will be able to program the memory before switching the computer 
+                        into run mode where it will execute the programs that I have created. The SRAM I am building has 16 possible locations in memory 
+                        and 8 bits at each address for a total of 16 Bytes of SRAM memory.
+                    </p>
+                </div>
+                <img src="../pictures/week-8.2-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-8.2-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        After installing the chips that will store memory and tying its output to the computer bus, this week I built two 
+                        separate modes that can access SRAM. Using a physical switch connected to +5V to indicate a logic HIGH or LOW, a control 
+                        signal is passed to the select pin of a multiplexer. If this is HIGH, the SRAM will choose to change address and memory values 
+                        according to the inputs indicated by the manual mode dip switches for address and binary value. Otherwise, the mux will choose 
+                        to pass the input from the computer bus to the SRAM chip during run mode. In run mode, the address and value at each address 
+                        can be copied in from the bus by a control pin that is put through an AND gate with the rising edge of the computer clock. This 
+                        control pin will later be controlled by the CPU to update the memory when necessary. Similarly, a control pin is used to either 
+                        push the address stored in memory to the bus or not. The way that the SRAM was intended to update in programming mode 
+                        was to push a button that would directly connect an input to GND. Since these chips normally default no inputs as a logic HIGH,
+                        this would work properly to update the memory when the button is pushed. However, the inputs would sometimes be interpreted 
+                        improperly by the chip, making the memory update unreliably. To fix this, I made a simple voltage divider that connects the input pin 
+                        to 5V through a small resistor when the button is not pressed. The button is in parallel with a larger resistor, so that when it is 
+                        pushed, the input of the chip is shorted to GND. This solution seems to produce a much more reliable method for programming.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                At this point in my Digital Logic and Design class (ECE 271), we are just beginning to learn about how memory is stored in 
+                a computer, so the timing for this week's project could not be better. I was able to apply the knowledge that I gained in 
+                class about D-flip-flops and how they work to not only understand what my computer is doing at a high level, but also at 
+                the internal level of the IC chips that I'm using. By being able to understand the structure of the memory arrays and how 
+                these would be layed out inside the chip, I am happy to see that I'm making substantial progress towards completing my goal 
+                with this project of understanding computers at a fundamental level.
+            </p>
+        </div>
+    </body>
+</html>

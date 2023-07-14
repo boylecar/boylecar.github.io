@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 9 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-9.2-page.html">
+                    <h1>Week 9 - Program Counter</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-9.2-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Continue building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        In order to continue with this project by building the Program Counter Module, I continued to follow along with the instructions
+                        and schematics provided by Ben Eater, an electronics educator. This module will simply act as 4-bit binary counter that will be implemented 
+                        later to track the current step of the program being executed. To build this module, I only needed two IC chips. The 74LS161 itself is 
+                        a binary counter which increments by 1 at the rising edge of each clock pulse. The outputs of this chip are put through a tristate 
+                        buffer (74LS245) to control when it is driven to the bus.
+                    </p>
+                </div>
+                <img src="../pictures/week-9.2-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-9.2-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        Building this module was relatively simple as I have already used the tristate buffer chip before, and the binary counter chip was 
+                        simple to use. At a fundamental level this chip uses flip-flops with its outputs tied to its inputs, and its clock signal tied to the 
+                        output of the previous flip-flop hooked up in series. This will effectively cause the next-most significant bit to turn on when the one 
+                        below it turns off, which is exactly how you would count in binary. The enable pin for this chip will be used later in the design of 
+                        the CPU to decide when the program counter should increment or not. The value stored by this counter will represent 
+                        the "step" of the current program, and increment after a step is completed.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                A few weeks ago when I was introduced to flip-flops and counters in my Digital Logic and Design class, I was entirely new to 
+                the idea and implementation. After building a functioning register, I had a better understanding of the implementaion of flip-flops.
+                Now after building the program counter and seeing yet another way that you can use this building block that is the flip-flop, I am very 
+                satisfied to know that I am making progress towards my goal of understanding computers, and electronics more broadly, at a fundamental level.
+                By seeing not just one but many distinctly different ways to use a flip-flop, I am beginning to become more familiar with its functionality 
+                which allows me to be more creative in how I implement my knowledge.
+            </p>
+        </div>
+    </body>
+</html>

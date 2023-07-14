@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 3 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-3.3-page.html">
+                    <h1>Week 3 - Central Processing Unit (CPU)</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-3.3-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Continue building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        Now that almost everything on my computer is installed and functional, the next step to make it more functional is to organize 
+                        all of the control signals in one place. Right now, you would have to manually adjust signals HIGH or LOW to cause anything 
+                        interesting to happen on the computer. To make it better, I want to be able to program it to perform these operations by itself.
+                        Similar to the way I built the output register, I will use EEPROM's to replace combinational logic. Based on the current 
+                        step of the current function, the EEPROM's will activate a signal by driving the output HIGH, turning on the signal. If it 
+                        is an active LOW signal, then the signal will first be driven through an inverter before reaching the chip. All of the non-inverted 
+                        signals are attached to an LED so I can visually see when a signal is active or not.
+                    </p>
+                </div>
+                <img src="../pictures/week-3.3-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-3.3-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        The most challenging and time-consuming part of this week's project was simply wiring everything together in a way that is neat and 
+                        organized. After I had attached all the wires properly through the inverters and to the LED's, I connected the inputs 
+                        of the LED's to the outputs of the EEPROM's corresponding to the correct signal. Using a similar method to the way that 
+                        the output register cycles through 4 states, I used the 74LS161 binary counter to construct a similar counter for values from 
+                        0 to 7 that will act as the instruction step counter. The way that the CPU will work is that based on the current state of 
+                        the instruction register, which informs which instruction we are performing, and the current state of the step counter, which 
+                        indicates the current step of the current function, the EEPROM will update the signals for the next operation. Using the 
+                        Arduino programmer that I had built previously, I programmed the EEPROM to store the information which will turn on the control 
+                        signals for a given instruction and step.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                Although this week was potentially the most time-consuming of any other week because of all the wiring and writing the program 
+                for the EEPROM, it was by far the most rewarding. Being able to hook up my computer and watch it run for the first time was 
+                the most rewarding feeling I have had from any project so far. After spending countless hours trying to understand and build 
+                each little peice from scratch, it's very exciting to finally reach a point where the computer does something useful. In a previous 
+                project, I had to use Assembly Language to program a microcontroller. At the time, I knew very little about what was actually 
+                happening. Now that I have had a more formal introduction by doing this project, it's very exciting to look back on how much I have 
+                learned in just 6 months from when I knew absolutely nothing about electronics, much less about how to build any.
+            </p>
+        </div>
+    </body>
+</html>
