@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 5 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-5.3-page.html">
+                    <h1>Week 5 - Writing Programs for 8-bit Computer</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-5.3-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As would be expected due to my choice of major, I am highly interested in understanding any system or product that 
+                        uses electricity. The most important and prevalent today broadly fits under the category of "computer."
+                        In my pursuit of a deeper understanding of electronics and more specifically computers, I started off 
+                        this project with the goal of gaining more knowledge about the fundamentals of a computer. The 
+                        best way for me to really understand such a complex system is to start building it myself. The goal I 
+                        defined clearly for this week is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            FINISH building a simple computer by understanding its components at a fundamental level.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        The final step needed to make this computer functional was to create instructions that the computer would use to 
+                        execute multiple steps. For example, the ADD instruction that I wrote executes a series of microinstructions to take 
+                        the contents of a location in memory, add it to the value in the A register, and store that new value in the A register.
+                        The first microinstruction of every instruction is to load the contents of the program counter into memory, so the 
+                        computer knows which instruction to perform. First I will need to program the EEPROM's with the information of what signals to set 
+                        and when. Then when the computer is on, I will "program" the machine code into RAM and execute the program.
+                    </p>
+                </div>
+                <img src="../pictures/week-5.3-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-5.3-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        As shown in the first image above, I created many unique instructions that the CPU will be able to interpret 
+                        and set the signals to the correct state with proper timing. The number associated with the Assembly language 
+                        code is arbitrary, as long as I remember which instruction code corresponds to which instruction programmed on 
+                        the EEPROM CPU. For example, when the CPU receives the instruction code: 1110, it knows to start the sequence of 
+                        microinstructions that will cause the output register to display what is stored in the A register on the hex display.
+                        Or when the CPU receives the instruction: 0110, it will "jump" to the address location that is specified. Using these 
+                        commands, I first wrote a program that will count up to 255 and back down again. I also wrote a program that calculates 
+                        Fibonacci numbers and stops at 233, as well as a program that can multiply two numbers.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                As I have finally reached the end of this project, it's very surreal to sit back and look at how far I have come in just a 
+                few short weeks. Before I began this project, I had almost no idea how computers worked at any level, but now I have built each 
+                module of a functioning computer piece by piece from just IC chips, resistors, capacitors, LED's, buttons, and swithces. Using 
+                these few components, I have built something much more complex that resembles how modern computers work at a fundamental level. There 
+                is a vastly large gap between the capabilities of this computer and any modern computer, but the amount that I have learned from this 
+                project is invaluable. I'm very excited to see what I can do with my new understanding moving forward and what projects I will be able to build with this project as my foundational understanding.
+            </p>
+        </div>
+    </body>
+</html>
