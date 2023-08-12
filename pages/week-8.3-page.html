@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 8 Project</title>
+            <link rel="stylesheet" href="stylesheets/style999.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-8.3-page.html">
+                    <h1>Week 8 - LED Audio Filter and Speaker</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-8.3-photos/1.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        Although I began college classes just last fall, I have been able to take some sophomore-level courses already 
+                        and ENGR 203 is the last course in the "Electrical Fundamentals" series. By taking that class this summer,
+                        I will be on track as a Junior ECE student this fall. Because this class is the last in the fundamentals series,
+                        it makes sense that the lab project for this class is a term-long project that incorporates everything that 
+                        we have learned so far in this series. For this reason, I decided that it was important to document this project 
+                        more extensively here on my website to see how far I've come, and to see this notable landmark when I look back 
+                        on my journey as an engineer. The assignment for this project is:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Design and build an audio filter light-show with a speaker module.
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        The first step to completing this project was to choose a song that I would want to demonstrate for the lab demo.
+                        The song I chose is "Hold On, We're Going Home" by Drake, and using the app Audible I created a spectrogram of 
+                        the song. A spectrogram is a graph with time on the x-axis and frequency on the y-axis, with magnitude of frequency 
+                        indicated by a brighter color. Essentially, it shows what frequencies are most prominent in the song over time. 
+                        Using this, I decided that everything under 750Hz should be filtered into the bass channel, everything above 3000Hz
+                        should be filtered into the high-tone channel, and everything in between would be the mid-range channel. After 
+                        choosing the song and the frequency bands and creating a top-level diagram of the entire circuit, the next 
+                        step was to design the filters and speaker module.
+                    </p>
+                </div>
+                <img src="../pictures/week-8.3-photos/2.png" alt="XXX"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-8.3-photos/3.png" alt="XXX"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        To design the filters for the low-range and high-range channels, I used second-order active filters with 
+                        Sallen-Key topology. I designed these filters to be "butterworth" filters by using prototype capacitor values 
+                        for values that would be easy to obtain, like a .1uF and a .05uF that you can make with two .1uF capacitors in 
+                        series. Using these prototype values for the low-pass and high-pass filters and cutoff frequencies of 750 and 
+                        3000Hz respectively, I found the resistor values that I needed to build these filters. For the bandpass filter 
+                        that would pass the mid-range tones, I used cascaded Sallen-Key filters where one was a lowpass filter with a 
+                        cutoff frequency of 3000Hz, and a highpass filter with a cutoff frequency of 750Hz. These filters used an LM741
+                        opamp, and for the speaker module which was a simple opamp circuit to amplify the audio signal in, I used an LM386 
+                        opamp. After testing this circuit, I realized that there wasn't enough voltage on the output of the filters 
+                        to turn on an LED, but that the filters were working properly. To fix this, I designed another stage for each 
+                        filter individually which would use an LMC6032 opamp to amplify the output and drive an LED. I also included 
+                        potentiometers to adjust the speaker volume and individual channel light sensitivity, and finally a switch to 
+                        turn of the speaker entirely.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p>
+                This project was exciting to work on and complete because of how much of my learning I was able to apply from my previous 
+                classes and how large the project was. There are certainly benefits to smaller projects that just test a specific area of 
+                knowledge or skill, but I personally find it more enjoyable to work on a larger project where there are many smaller 
+                problems to solve along the way. In this project, there was 5 distinct problems to solve that could've each been a small 
+                project on their own. The three filters, the speaker module, and the amplification stages were all distinctly different 
+                and are similar to lab projects I would've done last term in the Electrical Fundamentals series. To be able to put them all 
+                together into a kind of "portfolio" project like this was exciting and extremely rewarding. Going forward I think I would 
+                benefit more from spending less time on perfecting the initial desing, and try to actually build an initial design more 
+                quickly. There will always be real-world application problems that you can't forsee in your design and theory, so trying to 
+                get an initial design that will work and making improvements from there would've been better for this project.
+            </p>
+        </div>
+    </body>
+</html>
