@@ -24,11 +24,17 @@
                 <div class="text">
                     <h4>WHY?</h4>
                     <p>
-                        
+                        In my Introdcution to Computer Science class (CS 162), our final project for the course was to build a variation 
+                        of the classic game of Chess. In this version, all pieces moved the same but the starting position of the pieces 
+                        is the one shown to the left. However, you are not allowed to make a move that puts the opposing player's king 
+                        in check, nor your own king in check. The purpose of the game is instead to get your king to row 8 of the board. This 
+                        was an appropriate challenge for my current skill level with programming in Python, but after finishing the project 
+                        I felt I could learn a lot from challenging myself to build a full working Chess game with Python. Therefore, 
+                        my goal this week was to:
                     </p>
                     <h5>
                         <strong><em>
-                            
+                            Create a playable game of Chess using Python.
                         </em></strong>
                     </h5>
                 </div>
@@ -37,7 +43,12 @@
                 <div class="text">
                     <h4>HOW?</h4>
                     <p>
-                        
+                        To start this project, there were a few significant challenges that I could forsee before even beginning. 
+                        Firstly, I would need to find a way to represent each of the pieces with unique properties, and use some kind of 
+                        object to represent their positions on the board. The greatest challenge for this project would definitely be to 
+                        determine if a move is allowed or not. This is especially difficult because of how many checks need to be done for 
+                        each piece attempting to move. Finally, I would have to account for special cases like En Passant, Castling, 
+                        promoting a Pawn, Stalemate, and Checkmate.
                     </p>
                 </div>
                 <img src="../pictures/week-7.3-photos/2.png" alt="XXX"></img>
@@ -47,7 +58,15 @@
                 <div class="text">
                     <h4>WHAT?</h4>
                     <p>
-                        
+                        To start this project I create a class of objects called Pieces that would represent the individual pieces on the 
+                        board containing information like the piece's name, color, ASCII symbol, and number of moves made. I also defined a 
+                        unique class for each piece that inherits from the Pieces class and initializes the variables with the correct values.
+                        I then defined a ChessVar class that is used to represent the chess game. This class has internal variables for each 
+                        piece on the board, which is represented by a dictionary containing 8 lists as the keys to correspond to the 8 columns on 
+                        the chess board. It also has useful variables to track the state of the game (check, unfinished, stalemate, etc.), the turn 
+                        number, and stats about whether or not someone is attempting a "special" move (en passant, castle, promotion). The class has 
+                        several methods but the two most important are the make_move() method which calls the verify_move() method. These two work
+                        together to ensure that a move is legal and update the board accordingly if it is.
                     </p>
                 </div>
             </div>
@@ -55,7 +74,12 @@
         <div class="reflection">
             <h4>REFLECTION</h4>
             <p> 
-                
+                Having completed this project I am very satisfied with my work overall. During this class and especially with this project 
+                I learned that I very much enjoy the process of writing a program. I looked forward to the projects for this class more than 
+                any of my other classes by far. For this reason, I would essentially dedicate an entire day to work for this class, and try 
+                to finish my other assignments on other days. I love the feeling I got every week sitting down in the morning having no idea 
+                how I'm going to complete the project this week but knowing that by the end of the day I will have figured it out. That 
+                process of struggling towards a solution is something I have fallen in love with during this class.
             </p>
         </div>
     </body>
