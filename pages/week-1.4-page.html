@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 1 Project</title>
+            <link rel="stylesheet" href="stylesheets/style1.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-1-page.html">
+                    <h1>Week 1 - BJT Amplifier</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-1.4-photos/1.png" alt="Schematic"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As I have just began my Junior-level electrical engineering classes this fall, we have started learning about diodes and BJT transistors in Electronics I.
+                        In order to gain a more fundamental understanding of the concepts that we are studying and their applications, for this week's project I wanted to build some 
+                        kind of project using a BJT transistor. Being that the BJT was first used as an amplifier, I decided that this would be the best project to start with. Therefore,
+                        my goal for this week was:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Create a signal amplifier using a BJT
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        The first step necessary to complete this project would be to find a circuit topology that is not too complex but still provides a substantial gain. Next I 
+                        would need to choose component values that would produce a desired gain specification, and then simulate the behavior of the circuit. I would readjust my 
+                        component values again and repeat until I settled on a design that could produce a gain of 15. Once I did this I could then build the physical circuit, and 
+                        finally observe the output signal with an oscilloscope to verify that my circuit works as intended.
+                    </p>
+                </div>
+                <img src="../pictures/week-1.4-photos/2.png" alt="Wooden Box"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-1.4-photos/3.png" alt="Wooden Box"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        I determined that the common emitter amplifier would be the best choice for the purpose of this project. The first thing I chose about this circuit is the 
+                        supply voltage that I would be using. 15V was a relatively easy value to work with, and so this is what I used going forward. Before including any coupling 
+                        or bypass capacitors, I first determined the ratio of Rc and Re, so that the amp would have a gain of 7.5 (Rc = 7.5 x Re). To set the DC operating point at 
+                        exactly half of the supply voltage for maximum amplitude, I calculated the necessary Ic to set Vc at 7.5V. Approximating Ic = Ie allowed my to then find 
+                        what Ve must be, and therefore Vb = Ve + 0.6V. Finally I used large resistors to create a voltage divider and set Vb at this voltage. Next I simulated my 
+                        circuit with ngspice and found that Vc was too low. To fix this I needed to decrease Ic, and therefore decrease Ib slightly. To do this I simply modified the 
+                        values in the voltage divider. After simulating again, I found that the operating point was nearly exactly at 7.5V. To finalize my design I added coupling 
+                        capacitors at the input and output, and a bypass capacitor at Ve. To high frequencies, this creates a near short through the capacitor without changing the DC 
+                        operating point. This resulted in nearly 2x's the gain, now being close to 15. Finally I built my circuit by soldering onto a copper plate. Using a function 
+                        generator and an oscilloscope, I measured a gain of 12 for my circuit, almost reaching the target of 15.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                Overall this week was very exciting. Until now most of my projects have been made on breadboards, a PCB, or with an FPGA. This week I was excited to actually solder 
+                connections onto the copper ground plate and build the circuit this way. It gives me even more insight into how extremely complex and difficult it would be to create 
+                an advanced PCB, and how magical it is to fit such complex logic and signal processing onto a tiny PCB that runs over a billion operations every second. It's also 
+                rewarding to see that everything I have been learning is starting to become applicable, and that I can use my knowledge and skills to build electronics that have a 
+                real, observable purpose. I have certainly completed projects with a similar result, but the fact that this basic amplifier is made exclusively with fundamental 
+                circuit components and hand soldered makes it just that much more appealing.
+            </p>
+        </div>
+    </body>
+</html>
+
