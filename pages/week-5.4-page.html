@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 2 Project</title>
+            <link rel="stylesheet" href="stylesheets/style1.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-5.4-page.html">
+                    <h1>Week 5 - Brake Light PCB Design (Altium)</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-5.4-photos/1.png" alt="Schematic"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        Last year I joined Global Formula Racing (GFR), an engineering club that we have at Oregon State University. I didn't yet have the technical knowledge to 
+                        really contribute as much as I would've liked, but this year I am much more confident in my knowledge and ability. This year the club is hosting a challenge for the 
+                        best PCB brake light design. Because I know this would be a great way to gain more experience with circuit design and PCB design, my goal this week is to:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Design a PCB for the brake lights on the Global Formula Racing car
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        The very limited amount of parameters on this design made it pretty simple, and so the design process was very straightforward. First I would begin by identifying 
+                        the design requirements from the SFAE rulebook, then design the circuit in a top level diagram. After that I would need to identify the physical components I 
+                        want to use out of the list of pre-approved components for GFR. Finally I would import the schematic diagram into a PCB file and lay out the PCB to meet the 
+                        design specifications outlined in the rulebook.
+                    </p>
+                </div>
+                <img src="../pictures/week-5.4-photos/2.png" alt="Wooden Box"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-5.4-photos/3.png" alt="Wooden Box"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        The most significant design requirements for this PCB are the minimum illumination area requirement of 15cm^2, and our own requirement that the PCB take a 
+                        12V power supply from its control module. First I looked at what components were available to use, and decided that a diffused red SMD LED component was the 
+                        best option. Using the datahseet I determined that it's forward voltage drop is 2V, and its suggested current is 20mA. While it might be possible then to put 
+                        six of these LED's in series for a total of a 12V drop, I thought that it would be too close to the supply voltage and with a decent fluctuation in supply voltage
+                        the LED's may flicker or start to dim. For this reason I put only five LED's in series, and included a resistor that would have close to a 2V drop at 20mA (a 100 
+                        Ohm resistor). In this case, if the supply voltage did fluctuate it would maintain all four LED's and only decrease the current slightly. Next I arranged 6 series' 
+                        of the five LED's and a resistor extending outward from the center of the board where 12V and GND will arrive. Finally I added a polygon ground plane to the top 
+                        layer of the board.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                When I started college last fall I was pretty confident that I wanted to become an electrical engineer and that I had the skills to become great at my job. One year later, 
+                it's very exciting to be able to work on the kind of projects that used to seem so complex but are starting to become trivial. I enjoy the process of PCB design from 
+                start to finish and it's so exciting and rewarding. My favorite part is to sit down and have no idea what my final design is going to look, but knowing that I will 
+                have a fun time on my way to discovering what will be my final product. I have learned to love this process in academics, programming software, and I am now learning 
+                to enjoy it in PCB design as well. I want to continue to learn more about circuit design and PCB design and I'm just as excited as ever for my next few projects.
+            </p>
+        </div>
+    </body>
+</html>
+

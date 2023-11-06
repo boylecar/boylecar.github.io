@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "time.h": "c",
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "__locale": "cpp"
-    }
-}
