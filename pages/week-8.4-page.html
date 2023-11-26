@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 8 Project</title>
+            <link rel="stylesheet" href="stylesheets/style1.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-8.4-page.html">
+                    <h1>Week 8 - C++ Programming pt. 4</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-8.4-photos/1.png" alt="Schematic"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        This week the CS 162 class in C++ that I tutor for has to complete their most difficult assignment of the term. 
+                        Similar to the last few experiences involving my C++ programming, this week I wanted to complete this assignment
+                        because I used Python when I took this class, and I think it is important for me to improve my C++ programming skills.
+                        Therefore, my goal this week was pretty straightforward:
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Finish Assignment 4 for C++, using Classes and polymorphism to create "Hunt the Wumpus"
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        The design outline for this assignment required me to make a game that the user can play, where they "walk" through 
+                        a cave system trying to find the hidden gold, and return to where they started. In the meantime, they have to avoid 
+                        the hazards (bats and stalactites), as well as the Wumpus which will kill the player if they enter the same 
+                        square as it. However, the player has 3 arrows they can use to try and shoot the wumpus, by using the clues they 
+                        are given if the enter a square directly next to one of the hazards. Most of the functions required to run the game 
+                        are a part of the Game class, and the hazards on the board inherit form the Event class.
+                    </p>
+                </div>
+                <img src="../pictures/week-8.4-photos/2.png" alt="Wooden Box"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-8.4-photos/3.png" alt="Wooden Box"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        To create this game, the Game class was used to store all information about the game, including the player's start position,
+                        the player's current position, the number of rows and columns on the board, the location of the Wumpus, a bool value for 
+                        whether or not the person has found the gold, etc. The most imporant of these is the 2D vector used to store the game board.
+                        The 2D vector holds objects of the Room class. Each room has an Event* that is nullptr if the room is empty, or points to 
+                        an event if it's not. Because all of the different objects on the board (bats, stalactites, Wumpus, gold) inheret from Event, 
+                        the Event* in a Room object can point to an object of any one of these specific types. Many functions were required to 
+                        move the player on the board, and perform the actions that are necessary when the player encounters one of the objects.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                This project is obviously very similar to my C++ pt. 3 project in terms of the skills that I developed by working on this project, so 
+                naturally I will have gained similar insights. This week it became even more clear to me just how much it is helping me as an engineer 
+                overall to become a better programmer. Not only does it make me better at programming specifically, but I think it does 
+                an incredible job of helping me train the part of my brain responsible for solving problems from the fundamentals, and first 
+                principles reasoning, which may well be the defining characteristic of a good engineer. I think that continuing to become 
+                a better programmer will be worth the investment in the long run and it is something I plan to continue working on moving 
+                forward.
+
+            </p>
+        </div>
+    </body>
+</html>
+
