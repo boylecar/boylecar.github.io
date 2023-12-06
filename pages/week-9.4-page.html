@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Week 9 Project</title>
+            <link rel="stylesheet" href="stylesheets/style1.css"> 
+    </head>
+    <body>
+        <div class="heading">
+            <div class="headingL">
+                <a href="../index.html"><h2>Home</h2></a>
+            </div>
+            <div class="headingM">
+                <a href="week-9.4-page.html">
+                    <h1>Week 9 - Opamp Oscillator</h1>
+                </a>
+            </div>
+            <div class="headingR">
+            </div>
+        </div>
+        <div class="page-body">
+            <div class="top">
+                <img src="../pictures/week-9.4-photos/1.png" alt="Schematic"></img>
+                <div class="text">
+                    <h4>WHY?</h4>
+                    <p>
+                        As we learn more and more about electronic components and the kinds of circuits that we can build in my Junior-level 
+                        classes, I become more and more excited about the career that I chose. For our final project for my Junior Design 
+                        class, we designed a voltage oscillator using opamps. This circuit is the most interesting that we have been able 
+                        to design in this class, so for this reason I chose to include it as my project for this week.
+                    </p>
+                    <h5>
+                        <strong><em>
+                            Build a voltage oscillator using opamps
+                        </em></strong>
+                    </h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="text">
+                    <h4>HOW?</h4>
+                    <p>
+                        From a high level, this circuit works by taking advantage of the fact that it takes tiem to charge and discharge a 
+                        capacitor, as well as the ability to use opamps with feedback to have the output follow its non-inverting input. 
+                        By connecting multiple opamps in series, each with their own RC circuit, you create a series of circuits that 
+                        will have similiar wave forms on their output, but each be out of phase from one another.
+                    </p>
+                </div>
+                <img src="../pictures/week-9.4-photos/2.png" alt="Wooden Box"></img>
+            </div>
+            <div class="bottom">
+                <img src="../pictures/week-9.4-photos/3.png" alt="Wooden Box"></img>
+                <div class="text">
+                    <h4>WHAT?</h4>
+                    <p>
+                        At each of the opamps in this circuit with its output connected to the inverting input, the output of the opamp 
+                        will follow the voltage at the non-inverting pin, due to the behavior of an opamp. When the voltage on the output 
+                        rises, the voltage on the non-inverting input of the next opamp starts to rise determined by the rate set by 
+                        the RC relationship. This is what causes the next wave to be slightly out of phase. This pattern continues, further 
+                        shifiting the wave form and decreasing its magnitude from losses in the resistors, until finally the waveform 
+                        reaches the primary opamp circuit, which has been set to a specific gain to account for the losses from the other opamps.
+                        Once the circuit is disturbed from its initial state, the outputs of the opamps will continue to oscillate indefinitely.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reflection">
+            <h4>REFLECTION</h4>
+            <p> 
+                This week's project, although pretty straightforward, was just as interesting and educational as the others. I think that the best thing 
+                I can do for myself to gain experience with electronics and get better over time is to see circuits that others have made, 
+                learn why they made the design decisions that they did, and gain more of an intuition for circuit design. As I approach 
+                the end of this year, I am so proud to look back on how far I have come and how much I have learned. When I first started 
+                these weekly projects I questioned whether or not it would have any real benefit or I was just wasting my time. I took a 
+                risk by doing something this unique, but now I realize it was worth absolutely every minute.
+            </p>
+        </div>
+    </body>
+</html>
+
